@@ -141,6 +141,98 @@ body{padding-block-end:84px}
 .thbtn{margin-top:4px;font-size:.92rem;min-height:46px}
 @media (min-width:700px){.fgrid{grid-template-columns:1fr 1fr}}
 
+/* ===== Politur ===== */
+:root{--shadow:0 1px 2px rgba(20,32,60,.06),0 6px 18px rgba(20,32,60,.06);--r:16px;--grad1:#1f4fd0;--grad2:#5b3fd1}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px rgba(0,0,0,.35);--grad1:#3457c9;--grad2:#5b3fc0}}
+:root[data-theme="dark"]{--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px rgba(0,0,0,.35);--grad1:#3457c9;--grad2:#5b3fc0}
+body{letter-spacing:.005em}
+.card,.row,.stat{border-radius:var(--r);box-shadow:var(--shadow);border-color:transparent}
+.btn{border-radius:14px;min-height:52px;box-shadow:var(--shadow);border-color:transparent;transition:transform .08s,filter .15s}
+.btn:active{transform:scale(.985)}
+.btn.primary{background:linear-gradient(135deg,var(--grad1),var(--grad2));box-shadow:0 6px 18px rgba(50,70,200,.3);color:#fff}
+.btn.ghost{box-shadow:none;border:1px solid var(--line)}
+.hero{position:relative;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:#fff;border-radius:22px;padding:22px 20px 22px;margin:2px 0 16px;box-shadow:0 10px 30px rgba(50,70,200,.25);overflow:hidden}
+.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.1)}
+.hero h1{color:#fff;margin:4px 0 6px;font-size:1.8rem}
+.hero p{margin:0;color:rgba(255,255,255,.88);font-size:.95rem;max-width:26em;position:relative;z-index:1}
+.hero .kick{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8;font-weight:700}
+.hero.slim{padding:18px 20px}
+.ring{position:absolute;right:16px;bottom:14px;width:64px;height:64px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:grid;place-items:center;z-index:1}
+.ring b{width:50px;height:50px;border-radius:50%;background:var(--grad2);display:grid;place-items:center;font-size:.82rem}
+.hero:has(.ring) p{max-width:15em}
+.stat{padding:12px 14px}
+.stat b{font-size:1.5rem;color:var(--accent)}
+.row{transition:transform .08s}
+.row:active{transform:scale(.99)}
+.grp h2{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dot{width:6px;height:38px}
+.tabs{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);box-shadow:0 -4px 20px rgba(20,32,60,.06)}
+.tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.72rem;letter-spacing:.02em;min-height:54px}
+.tabs button.on{background:none;color:var(--accent)}
+.tabs button.on svg{background:var(--accent-soft);border-radius:12px;padding:3px 14px;width:52px;box-sizing:border-box}
+.tabs button svg{transition:background .15s}
+.formbox{background:linear-gradient(135deg,var(--accent-soft),var(--surface));border:1px solid var(--line);box-shadow:none}
+.formbox h2{color:var(--accent);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.card h2{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.ex .exh b.math{font-weight:600}
+.exa{color:var(--ok)}
+.fc{border-left:4px solid var(--accent)}
+.seg{background:var(--key);padding:4px;border-radius:14px;gap:4px}
+.seg button{border:0;background:none;border-radius:11px;color:var(--muted)}
+.seg button.on{background:var(--surface);color:var(--accent);box-shadow:var(--shadow)}
+.err{border-left:4px solid var(--bad)}
+.bar{position:sticky;top:0;z-index:4;background:var(--bg);padding:8px 0;margin-top:-8px}
+.res{border-radius:14px}
+.opt{border-radius:14px}
+input[type=text]{border-radius:14px}
+input[type=text]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.math{font-size:1.5rem}
+.prog{height:8px;border-radius:4px}
+.prog i{background:linear-gradient(90deg,var(--grad1),var(--grad2))}
+.big{background:linear-gradient(135deg,var(--grad1),var(--grad2));-webkit-background-clip:text;background-clip:text;color:transparent}
+body.chap h1{font-size:1.45rem}
+.goalrow{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.big2{font-size:1.8rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.stepper{margin-left:auto;display:flex;gap:6px}
+.stepper button{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-size:1.2rem;font-weight:700}
+.dchart{display:flex;gap:8px;align-items:flex-end;height:118px}
+.dcol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%}
+.dcol i{display:block;width:100%;max-width:34px;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,var(--grad2),var(--grad1))}
+.dv{font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;min-height:1em}
+.dl{font-size:.72rem;color:var(--muted)}
+.pl{padding:4px 16px}
+.prow{display:grid;grid-template-columns:1fr 130px;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.prow:first-child{border-top:0}
+.pn span{display:block;font-weight:600;font-size:.92rem;line-height:1.3}
+.pn small{color:var(--muted);font-size:.76rem}
+.pm{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+.mbar{width:100%;height:7px;border-radius:4px;background:var(--key);overflow:hidden}
+.mbar i{display:block;height:100%;border-radius:4px}
+.chip{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.02em}
+i.lv0{background:var(--line)}i.lv1{background:var(--bad)}i.lv2{background:#d98f1c}i.lv3{background:#4aa56b}i.lv4{background:var(--ok)}
+.chip.lv0{background:var(--key);color:var(--muted)}.chip.lv1{background:var(--bad-bg);color:var(--bad)}.chip.lv2{background:var(--hint-bg);color:var(--hint-ink)}.chip.lv3,.chip.lv4{background:var(--ok-bg);color:var(--ok)}
+.tabs button{font-size:.66rem}
+.tabs button.on svg{width:48px}
+.lvl{position:relative;z-index:1;margin-top:12px;font-size:.88rem;display:flex;flex-direction:column;gap:4px;max-width:14em}
+.lvl b{font-size:.95rem}
+.xpbar{display:block;height:6px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden}
+.xpbar i{display:block;height:100%;background:#fff;border-radius:3px}
+.lvl small{opacity:.8}
+.badges{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.bdg{display:flex;flex-direction:column;gap:1px;padding:10px;border-radius:12px;background:var(--bg);opacity:.55}
+.bdg.on{opacity:1;background:var(--accent-soft)}
+.bdg span{font-size:1.5rem;line-height:1.2}
+.bdg b{font-size:.85rem}
+.bdg small{font-size:.72rem;color:var(--muted)}
+.toast{position:fixed;left:50%;top:14px;transform:translate(-50%,-140%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:30;transition:transform .35s cubic-bezier(.2,1.2,.4,1);text-align:center;max-width:90vw;font-size:.95rem}
+.toast.show{transform:translate(-50%,0)}
+.toast small{opacity:.8}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:29;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:fall 1.8s ease-in forwards}
+@keyframes fall{to{transform:translate(var(--dx),105vh) rotate(var(--rot));opacity:.9}}
+.res.ok{animation:pop .3s ease-out}
+@keyframes pop{0%{transform:scale(.95)}60%{transform:scale(1.03)}100%{transform:scale(1)}}
+
 </style>
 </head>
 <body>
@@ -1545,9 +1637,63 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
   const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
   const rnd = () => Math.floor(Math.random() * 2147483000) + 1;
   const KEY = 'mathe-training-v1';
-  let data = { total: 0, ok: 0, streak: 0, best: 0, topics: {}, wrong: [] };
+  let data = { total: 0, ok: 0, streak: 0, best: 0, topics: {}, wrong: [], recent: {}, days: {}, read: {}, goal: 20, xp: 0, badges: {} };
   try { const raw = localStorage.getItem(KEY); if (raw) data = Object.assign(data, JSON.parse(raw)); } catch (e) { /* ohne Speicher weiter */ }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { /* ignorieren */ } };
+  const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  const dayKey = (off) => { const d = new Date(); d.setDate(d.getDate() - off); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  function dayStreak() { let n = 0; let o = (data.days[dayKey(0)] || 0) > 0 ? 0 : 1; while ((data.days[dayKey(o)] || 0) > 0) { n++; o++; } return n; }
+  function level(id) {
+    const r = (data.recent || {})[id] || []; if (r.length < 3) return { k: 0, name: 'Neu', acc: null };
+    const acc = r.filter(Boolean).length / r.length;
+    if (acc >= 0.8 && r.length >= 8) return { k: 4, name: 'Sicher', acc }; if (acc >= 0.8) return { k: 3, name: 'Gut', acc };
+    if (acc >= 0.5) return { k: 2, name: 'Im Aufbau', acc }; return { k: 1, name: 'Schwach', acc };
+  }
+  /* ---------- Spass: XP, Level, Abzeichen ---------- */
+  const TITLES = ['Zahlenlehrling', 'Klammer-Knacker', 'Bruch-Bändiger', 'Potenz-Profi', 'Gleichungs-Gärtner', 'Term-Taktiker', 'Formel-Fuchs', 'Algebra-Ass', 'Prüfungs-Profi', 'Mathe-Meister', 'Legende'];
+  const lvOf = (xp) => Math.floor(Math.sqrt((xp || 0) / 90)) + 1;
+  const lvBase = (l) => 90 * (l - 1) * (l - 1);
+  const titleOf = (l) => TITLES[Math.min(TITLES.length - 1, l - 1)];
+  const BADGES = [
+    ['first', '🌱', 'Erster Schritt', 'Die erste Aufgabe gelöst', (d) => d.total >= 1],
+    ['n10', '🔟', 'Zehnerpack', '10 Aufgaben gelöst', (d) => d.total >= 10],
+    ['n50', '🎯', 'Fleissig', '50 Aufgaben gelöst', (d) => d.total >= 50],
+    ['n100', '💯', 'Hunderter', '100 Aufgaben gelöst', (d) => d.total >= 100],
+    ['n500', '🚀', 'Marathon', '500 Aufgaben gelöst', (d) => d.total >= 500],
+    ['s10', '🔥', 'Heiss gelaufen', '10 richtige in Folge', (d) => d.best >= 10],
+    ['s25', '⚡', 'Unstoppbar', '25 richtige in Folge', (d) => d.best >= 25],
+    ['d3', '📅', 'Dranbleiber', '3 Tage in Folge geübt', () => dayStreak() >= 3],
+    ['d7', '🏆', 'Wochen-Held', '7 Tage in Folge geübt', () => dayStreak() >= 7],
+    ['goal', '✅', 'Tagesziel', 'Das Tagesziel erreicht', (d) => (d.days[today()] || 0) >= (d.goal || 20)],
+    ['master', '⭐', 'Thema gemeistert', 'Ein Thema auf «Sicher»', () => TOPICS.some((t) => level(t.id).k === 4)],
+    ['master5', '🌟', 'Fünf Themen sicher', '5 Themen auf «Sicher»', () => TOPICS.filter((t) => level(t.id).k === 4).length >= 5],
+    ['ex80', '🎓', 'Prüfung bestanden', 'Eine Prüfung mit 80 % oder mehr', (d) => (d.exams || []).some((e) => e.ok / e.n >= 0.8)],
+    ['ex100', '👑', 'Makellos', 'Eine Prüfung ohne Fehler', (d) => (d.exams || []).some((e) => e.ok === e.n && e.n >= 10)],
+    ['blitz', '⏱️', 'Blitzschnell', 'Eine Blitzrunde mit 8 von 10', (d) => (d.blitz || 0) >= 8],
+    ['read10', '📖', 'Leseratte', '10 Theorie-Kapitel gelesen', (d) => Object.keys(d.read || {}).length >= 10],
+    ['read24', '📚', 'Bibliothekar', 'Alle Kapitel gelesen', (d) => Object.keys(d.read || {}).length >= 24],
+  ];
+  const PRAISE = ['Richtig', 'Stark', 'Sauber gelöst', 'Genau', 'Top', 'Sitzt', 'Perfekt', 'Stimmt'];
+  function toast(msg) {
+    const el = document.createElement('div'); el.className = 'toast'; el.setAttribute('role', 'status'); el.innerHTML = msg; document.body.appendChild(el);
+    requestAnimationFrame(() => el.classList.add('show')); setTimeout(() => { el.classList.remove('show'); setTimeout(() => el.remove(), 400); }, 3200);
+  }
+  function confetti(n) {
+    try { if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (e) { /* weiter */ }
+    const box = document.createElement('div'); box.className = 'confetti'; box.setAttribute('aria-hidden', 'true');
+    const cols = ['#ff5d5d', '#ffb02e', '#3ecf8e', '#4d8dff', '#a66bff'];
+    for (let i = 0; i < (n || 28); i++) { const c = document.createElement('i'); c.style.left = Math.random() * 100 + '%'; c.style.background = cols[i % cols.length]; c.style.animationDelay = Math.random() * 0.25 + 's'; c.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px'); c.style.setProperty('--rot', Math.round(Math.random() * 720 - 360) + 'deg'); box.appendChild(c); }
+    document.body.appendChild(box); setTimeout(() => box.remove(), 2200);
+  }
+  function award(ok) {
+    const before = lvOf(data.xp);
+    if (ok) data.xp = (data.xp || 0) + 10 + Math.min(data.streak, 10);
+    const after = lvOf(data.xp); data.badges = data.badges || {}; const fresh = [];
+    BADGES.forEach((b) => { if (!data.badges[b[0]] && b[4](data)) { data.badges[b[0]] = today(); fresh.push(b); } });
+    if (after > before) { toast('⬆️ <b>Level ' + after + '</b>: ' + titleOf(after)); confetti(40); }
+    else if (fresh.length) { toast(fresh[0][1] + ' <b>' + fresh[0][2] + '</b><br><small>' + fresh[0][3] + '</small>'); confetti(32); }
+    else if (ok && data.streak > 0 && data.streak % 5 === 0) { toast('🔥 <b>' + data.streak + ' in Folge</b>'); confetti(18); }
+  }
   const T = (id) => TOPICS.find((t) => t.id === id);
 
   let S = null; // Sitzung
@@ -1568,9 +1714,16 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
   let view = 'home'; let tab = 'ueben'; let fsec = 0; let tfilter = '';
   const chTitle = (i) => (i < 22 ? DOC.kap[i].titel : THEORY[i].titel);
 
+  const IC = {
+    ueben: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+    pruefung: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h9"/></svg>',
+    theorie: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>',
+    fortschritt: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>',
+    formeln: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg>',
+  };
   function nav() {
-    const items = [['ueben', 'Üben'], ['pruefung', 'Prüfung'], ['theorie', 'Theorie'], ['formeln', 'Formeln']];
-    return '<nav class="tabs" aria-label="Hauptmenü">' + items.map((x) => '<button data-act="tab" data-tab="' + x[0] + '"' + (tab === x[0] ? ' class="on" aria-current="page"' : '') + '>' + x[1] + '</button>').join('') + '</nav>';
+    const items = [['ueben', 'Üben'], ['pruefung', 'Prüfung'], ['theorie', 'Theorie'], ['formeln', 'Formeln'], ['fortschritt', 'Fortschritt']];
+    return '<nav class="tabs" aria-label="Hauptmenü">' + items.map((x) => '<button data-act="tab" data-tab="' + x[0] + '"' + (tab === x[0] ? ' class="on" aria-current="page"' : '') + '>' + IC[x[0]] + '<span>' + x[1] + '</span></button>').join('') + '</nav>';
   }
   function shell(inner) { $app.innerHTML = inner + nav(); window.scrollTo(0, 0); }
   function home() {
@@ -1578,6 +1731,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (tab === 'pruefung') return examHub();
     if (tab === 'theorie') return theoryList();
     if (tab === 'formeln') return formulas();
+    if (tab === 'fortschritt') return progress();
     return uebenHome();
   }
 
@@ -1592,9 +1746,10 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
         return '<button class="row" data-act="topic" data-id="' + t.id + '"><span class="dot" style="background:' + t.color + '"></span><span><span class="t">' + esc(t.name) + '</span><span class="meter" style="display:block"><i style="width:' + pc + '%;display:block"></i></span></span><span class="m">' + (st.n ? st.ok + '/' + st.n : 'neu') + '</span></button>';
       }).join('') + '</div>';
     });
-    shell('<h1>Mathe-Training</h1><p class="sub">' + TOPICS.length + ' Themen, unbegrenzt viele neue Aufgaben, zu jeder Aufgabe Lösungsweg und Theorie.</p>' +
+    const pcAll = data.total ? Math.round((data.ok / data.total) * 100) : 0;
+    shell('<header class="hero"><div class="kick">Algebra und Gleichungen</div><h1>Mathe-Training</h1><p>' + TOPICS.length + ' Themen, unbegrenzt neue Aufgaben, Lösungsweg und Theorie zu jeder Aufgabe.</p><div class="lvl"><b>Level ' + lvOf(data.xp) + '</b> ' + titleOf(lvOf(data.xp)) + '<span class="xpbar"><i style="width:' + Math.round(((data.xp - lvBase(lvOf(data.xp))) / (lvBase(lvOf(data.xp) + 1) - lvBase(lvOf(data.xp)))) * 100) + '%"></i></span><small>' + data.xp + ' XP</small></div><div class="ring" style="--p:' + pcAll + '"><b>' + (data.total ? pcAll + '%' : '–') + '</b></div></header>' +
       '<div class="stats"><div class="stat"><b>' + data.total + '</b><span>Gelöst</span></div><div class="stat"><b>' + acc + '</b><span>Richtig</span></div><div class="stat"><b>' + data.streak + '</b><span>Serie (Best ' + data.best + ')</span></div></div>' +
-      '<div class="stack"><button class="btn primary" data-act="mix">Alles gemischt, endlos</button>' +
+      '<div class="stack"><button class="btn primary" data-act="mix">Alles gemischt, endlos</button><button class="btn" data-act="blitz">⏱️ Blitzrunde: 10 Aufgaben</button>' +
       '<button class="btn" data-act="review"' + (data.wrong.length ? '' : ' disabled') + '>Fehler wiederholen (' + data.wrong.length + ')</button></div>' + rows +
       '<p class="small muted" style="margin-top:18px">Eingabe: Hochzahl mit ^ (x^2), Bruch mit / und Klammern: (3a^2)/(4b^3). Die Symbolleiste hilft beim Tippen.</p>' +
       '<button class="linkbtn" data-act="reset">Statistik zurücksetzen</button>');
@@ -1603,7 +1758,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
   /* ---------- Prüfung ---------- */
   function examHub() {
     const hist = (data.exams || []).slice(0, 6).map((e) => '<div class="sumrow"><span>' + esc(e.name) + '<br><small class="muted">' + esc(e.date) + ', ' + e.min + ' min</small></span><b>' + e.ok + ' / ' + e.n + '</b></div>').join('');
-    shell('<h1>Prüfung üben</h1><p class="sub">Wie in der Prüfung: jede Aufgabe einmal, ohne Tipp, am Ende die Auswertung pro Thema. Die Aufgaben sind jedes Mal neu.</p>' +
+    shell('<header class="hero slim"><div class="kick">Prüfungsmodus</div><h1>Prüfung üben</h1><p>Wie in der Prüfung: jede Aufgabe einmal, ohne Tipp, am Ende die Auswertung pro Thema. Die Aufgaben sind jedes Mal neu.</p></header>' +
       '<div class="stack">' + Object.keys(EXAMS).map((k) => '<button class="btn' + (k === 'A' ? ' primary' : '') + '" data-act="exam" data-e="' + k + '">' + esc(EXAMS[k].name) + ' (' + EXAMS[k].q().length + ')</button>').join('') +
       '<button class="btn" data-act="review"' + (data.wrong.length ? '' : ' disabled') + '>Fehler wiederholen (' + data.wrong.length + ')</button></div>' +
       '<h2 style="margin-top:22px">Letzte Ergebnisse</h2><div class="card">' + (hist || '<p class="muted" style="margin:0">Noch keine Prüfung gemacht.</p>') + '</div>');
@@ -1613,7 +1768,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
   function theoryList() {
     const q = tfilter.trim().toLowerCase();
     const grp = [['Grundlagen', 0, 6], ['Gleichungen', 6, 14], ['Ungleichungen', 14, 18], ['Betrag, Intervalle, Funktionen', 18, 22], ['Zusatz', 22, 24]];
-    let h = '<h1>Theorie</h1><p class="sub">Alle Kapitel mit Formeln, Vorgehen, durchgerechneten Beispielen und Übungen samt Lösung.</p><input type="text" id="tq" class="search" placeholder="Suchen, z. B. Wurzel, Betrag, Prozent" value="' + esc(tfilter) + '" aria-label="Kapitel suchen">';
+    let h = '<header class="hero slim"><div class="kick">Nachschlagen</div><h1>Theorie</h1><p>22 Kapitel mit Formeln, Vorgehen, durchgerechneten Beispielen und Übungen samt Lösung.</p></header><input type="text" id="tq" class="search" placeholder="Suchen, z. B. Wurzel, Betrag, Prozent" value="' + esc(tfilter) + '" aria-label="Kapitel suchen">';
     let any = false;
     grp.forEach((g) => {
       const rows = [];
@@ -1630,7 +1785,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (q) { const el = document.getElementById('tq'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
   }
   function chapter(i, back) {
-    view = 'chapter'; S = S; const c = i < 22 ? DOC.kap[i] : THEORY[i]; const full = i < 22;
+    view = 'chapter'; data.read = data.read || {}; if (!data.read[i]) { data.read[i] = 1; save(); } const c = i < 22 ? DOC.kap[i] : THEORY[i]; const full = i < 22;
     let h = '<div class="bar"><button class="btn ghost back" data-act="' + (back || 'theoryback') + '" aria-label="Zurück">←</button><div class="ttl">' + (full ? 'Kapitel ' + (i + 1) : 'Zusatz') + '</div></div><h1 style="font-size:1.4rem">' + esc(c.titel) + '</h1>';
     if (c.typ) h += '<p class="sub">Aufgabentyp: ' + esc(c.typ) + '</p>';
     h += '<div class="card formbox"><h2>Formeln</h2>' + (c.formel || []).map((l) => '<div class="fl">' + esc(l) + '</div>').join('') + '</div>';
@@ -1664,7 +1819,34 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (fsec === 0) body = cardsHTML(DOC.blatt2);
     else if (fsec === 1) body = cardsHTML(DOC.blatt1);
     else body = '<p class="small muted">Typische Fehler in der Prüfung: links falsch, rechts richtig.</p>' + DOC.fehler.map((f) => '<div class="card err"><div class="bad2">✗ ' + esc(f[0].replace(/^✗\s*/, '')) + '</div><div class="ok2">✓ ' + esc(f[1].replace(/^✓\s*/, '')) + '</div><div class="small muted">' + esc(f[2]) + '</div></div>').join('');
-    shell('<h1>Formeln</h1><p class="sub">Zum Nachschlagen. Jede Karte: Formel, Beispiel, Stolperstein.</p><div class="seg">' + seg + '</div>' + body);
+    shell('<header class="hero slim"><div class="kick">Spickzettel</div><h1>Formeln</h1><p>Jede Karte: Formel, Beispiel, Stolperstein.</p></header><div class="seg">' + seg + '</div>' + body);
+  }
+
+  /* ---------- Fortschritt ---------- */
+  function progress() {
+    view = 'fortschritt';
+    const td = data.days[today()] || 0; const goal = data.goal || 20; const gp = Math.min(100, Math.round((td / goal) * 100));
+    const lv = TOPICS.map((t) => level(t.id)); const solid = lv.filter((l) => l.k >= 3).length; const started = TOPICS.filter((t) => (data.topics[t.id] || { n: 0 }).n > 0).length;
+    const readN = Object.keys(data.read || {}).length; const wk = weakest(3).filter((id) => level(id).k <= 2);
+    const days = []; let mx = 1; for (let o = 6; o >= 0; o--) { const k = dayKey(o); const v = data.days[k] || 0; mx = Math.max(mx, v); days.push([o, v]); }
+    const wd = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+    const bars = days.map((d) => { const dt = new Date(); dt.setDate(dt.getDate() - d[0]); return '<div class="dcol"><span class="dv">' + (d[1] || '') + '</span><i style="height:' + Math.max(4, Math.round((d[1] / mx) * 70)) + 'px' + (d[1] ? '' : ';opacity:.3') + '"></i><span class="dl">' + wd[dt.getDay()] + '</span></div>'; }).join('');
+    const chips = ['Neu', 'Schwach', 'Im Aufbau', 'Gut', 'Sicher'];
+    let rows = '';
+    GROUPS.forEach((g) => {
+      const ts = TOPICS.filter((t) => t.group === g); if (!ts.length) return;
+      rows += '<h2 style="margin:18px 0 8px">' + esc(g) + '</h2><div class="card pl">' + ts.map((t) => { const l = level(t.id); const st = data.topics[t.id] || { n: 0, ok: 0 }; return '<div class="prow"><div class="pn"><span>' + esc(t.name) + '</span><small>' + (st.n ? st.ok + ' von ' + st.n + ' richtig' : 'noch nicht geübt') + '</small></div><div class="pm"><div class="mbar"><i class="lv' + l.k + '" style="width:' + (l.k * 25) + '%"></i></div><span class="chip lv' + l.k + '">' + chips[l.k] + '</span></div></div>'; }).join('') + '</div>';
+    });
+    const hist = (data.exams || []).slice(0, 6).map((e) => '<div class="sumrow"><span>' + esc(e.name) + '<br><small class="muted">' + esc(e.date) + ', ' + e.min + ' min</small></span><b>' + Math.round((e.ok / e.n) * 100) + ' %</b></div>').join('');
+    shell('<header class="hero slim"><div class="kick">Dein Stand</div><h1>Fortschritt</h1><p>Level ' + lvOf(data.xp) + ' ' + titleOf(lvOf(data.xp)) + ', ' + data.xp + ' XP. ' + solid + ' von ' + TOPICS.length + ' Themen sicher, ' + started + ' begonnen, ' + readN + ' von 24 Kapiteln gelesen.</p></header>' +
+      '<div class="card"><h2>Abzeichen (' + Object.keys(data.badges || {}).length + ' von ' + BADGES.length + ')</h2><div class="badges">' + BADGES.map((b) => { const on = (data.badges || {})[b[0]]; return '<div class="bdg' + (on ? ' on' : '') + '" title="' + esc(b[3]) + '"><span>' + (on ? b[1] : '🔒') + '</span><b>' + esc(b[2]) + '</b><small>' + esc(b[3]) + '</small></div>'; }).join('') + '</div></div>' +
+      '<div class="card"><h2>Tagesziel</h2><div class="goalrow"><b class="big2">' + td + '</b><span class="muted"> von ' + goal + ' Aufgaben heute</span><span class="stepper"><button data-act="goal" data-d="-5" aria-label="Ziel senken">−</button><button data-act="goal" data-d="5" aria-label="Ziel erhöhen">+</button></span></div><div class="prog"><i style="width:' + gp + '%"></i></div><p class="small muted" style="margin:8px 0 0">' + (td >= goal ? 'Tagesziel erreicht. ' : '') + 'Serie: ' + dayStreak() + ' ' + (dayStreak() === 1 ? 'Tag' : 'Tage') + ' in Folge.</p></div>' +
+      '<div class="card"><h2>Letzte 7 Tage</h2><div class="dchart">' + bars + '</div></div>' +
+      (wk.length ? '<div class="card"><h2>Hier lohnt sich Üben</h2>' + wk.map((id) => '<div class="sumrow"><span>' + esc(T(id).name) + '</span><b>' + Math.round(level(id).acc * 100) + ' %</b></div>').join('') + '<button class="btn primary" style="margin-top:12px" data-act="weak">Schwächste Themen üben</button></div>' : '') +
+      '<div class="card"><h2>Theorie gelesen</h2><div class="goalrow"><b class="big2">' + readN + '</b><span class="muted"> von 24 Kapiteln</span></div><div class="prog"><i style="width:' + Math.round((readN / 24) * 100) + '%"></i></div></div>' +
+      '<div class="card"><h2>Prüfungen</h2>' + (hist || '<p class="muted" style="margin:0">Noch keine Prüfung gemacht.</p>') + '</div>' + rows +
+      '<div class="card" style="margin-top:18px"><h2>Sichern</h2><p class="small muted" style="margin-top:0">Der Fortschritt liegt nur auf diesem Gerät und Browser. Mit einer Sicherung kannst du ihn aufs andere Gerät mitnehmen.</p><div class="grid2"><button class="btn" data-act="export">Sichern (Datei)</button><button class="btn" data-act="import">Laden</button></div><input type="file" id="impf" accept=".json,application/json" hidden></div>' +
+      '<button class="linkbtn" data-act="reset">Alle Daten zurücksetzen</button>');
   }
 
   /* ---------- Sitzung ---------- */
@@ -1672,11 +1854,18 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     tab = mode === 'exam' ? 'pruefung' : 'ueben';
     S = { mode, topic, idx: 0, ok: 0, n: 0, results: [], queue: null, t0: Date.now(), group: mode === 'grp' ? topic : null, exam: extra || null };
     if (mode === 'exam') S.queue = EXAMS[extra].q().map((x) => ({ t: x[0], sub: x[1], seed: rnd() }));
+    if (mode === 'blitz') { const all = TOPICS.map((t) => t.id); S.queue = []; for (let i = 0; i < 10; i++) S.queue.push({ t: all[Math.floor(Math.random() * all.length)], sub: null, seed: rnd() }); }
     if (mode === 'review') S.queue = data.wrong.map((w) => Object.assign({}, w));
+    if (mode === 'weak') S.weak = weakest(3);
     next(true);
   }
+  function weakest(k) {
+    const c = TOPICS.map((t) => ({ id: t.id, l: level(t.id), n: (data.topics[t.id] || { n: 0 }).n })).filter((x) => x.n > 0);
+    c.sort((a, b) => (a.l.acc == null ? 0.5 : a.l.acc) - (b.l.acc == null ? 0.5 : b.l.acc));
+    return c.slice(0, k).map((x) => x.id);
+  }
   function pickTopic() {
-    const pool = S.group ? TOPICS.filter((t) => t.group === S.group) : TOPICS;
+    const pool = S.weak ? TOPICS.filter((t) => S.weak.indexOf(t.id) >= 0) : (S.group ? TOPICS.filter((t) => t.group === S.group) : TOPICS);
     const w = pool.map((t) => { const s = data.topics[t.id]; const n = s ? s.n : 0; const acc = n ? s.ok / n : 0.5; return 1 + 3 * (1 - acc) + (n < 3 ? 1.5 : 0); });
     let r = Math.random() * w.reduce((a, b) => a + b, 0);
     for (let i = 0; i < w.length; i++) { r -= w[i]; if (r <= 0) return pool[i].id; }
@@ -1696,11 +1885,14 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (S.counted) return; S.counted = true;
     const id = S.p.topic; const tp = data.topics[id] || (data.topics[id] = { n: 0, ok: 0 });
     tp.n++; data.total++; S.n++;
+    data.recent = data.recent || {}; const rc = data.recent[id] || (data.recent[id] = []); rc.push(!!ok); if (rc.length > 10) rc.shift();
+    data.days = data.days || {}; data.days[today()] = (data.days[today()] || 0) + 1;
     if (ok) { tp.ok++; data.ok++; data.streak++; S.ok++; data.best = Math.max(data.best, data.streak); } else data.streak = 0;
     S.results.push({ t: id, ok });
     const same = (w) => w.t === S.spec.t && w.seed === S.spec.seed;
     if (!ok) { if (!data.wrong.some(same)) data.wrong.unshift({ t: S.spec.t, seed: S.spec.seed, sub: S.spec.sub == null ? null : S.spec.sub }); data.wrong = data.wrong.slice(0, 60); }
     else if (S.mode === 'review') data.wrong = data.wrong.filter((w) => !same(w));
+    award(ok);
     save();
   }
 
@@ -1746,7 +1938,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
   function render() {
     const p = S.p; const isChoice = p.kind === 'tf' || p.kind === 'mc';
     const t = T(p.topic); const exam = S.mode === 'exam';
-    const title = exam ? 'Aufgabe ' + (S.idx + 1) + ' von ' + S.queue.length : (S.mode === 'review' ? 'Fehler wiederholen' : (S.mode === 'mix' ? 'Gemischt' : (S.mode === 'grp' ? 'Mischen: ' + S.group : t.name)));
+    const title = exam ? 'Aufgabe ' + (S.idx + 1) + ' von ' + S.queue.length : (S.mode === 'review' ? 'Fehler wiederholen' : (S.mode === 'mix' ? 'Gemischt' : (S.mode === 'blitz' ? '⏱️ Blitzrunde: ' + (S.idx + 1) + ' von 10' : S.mode === 'weak' ? 'Schwächste Themen' : S.mode === 'grp' ? 'Mischen: ' + S.group : t.name)));
     let h = '<div class="bar"><button class="btn ghost back" data-act="home" aria-label="Zurück zur Übersicht">←</button><div class="ttl">' + esc(title) + '</div><div class="score">' + S.ok + ' / ' + S.n + '</div></div>';
     if (S.queue) h += '<div class="prog" aria-hidden="true"><i style="width:' + Math.round((S.idx / S.queue.length) * 100) + '%"></i></div>';
     h += '<div class="card">' + (S.mode !== 'topic' ? '<div class="small muted" style="margin-bottom:6px">' + esc(t.short) + '</div>' : '') + p.html;
@@ -1756,7 +1948,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (S.phase === 'ask' && S.msg) h += '<div class="res bad" role="alert">Noch nicht richtig<small>' + esc(S.msg) + '</small></div>';
     if (S.phase === 'done') {
       const good = S.lastOk;
-      h += '<div class="res ' + (good ? 'ok' : 'bad') + '" role="status">' + (good ? (S.counted && S.firstOk === false ? 'Jetzt stimmt es' : 'Richtig') : 'Nicht ganz') + (S.msg && !good ? '<small>' + esc(S.msg) + '</small>' : '') + '</div>';
+      h += '<div class="res ' + (good ? 'ok' : 'bad') + '" role="status">' + (good ? (S.counted && S.firstOk === false ? 'Jetzt stimmt es' : (data.streak >= 3 && S.firstOk ? '🔥 ' + data.streak + ' in Folge' : PRAISE[S.idx % PRAISE.length] + (S.firstOk ? ' +' + (10 + Math.min(Math.max(data.streak - 1, 0), 10)) + ' XP' : ''))) : 'Nicht ganz, das nächste klappt') + (S.msg && !good ? '<small>' + esc(S.msg) + '</small>' : '') + '</div>';
       h += '<div class="card"><h2>' + (good ? 'So geht der Lösungsweg' : 'Lösung und Lösungsweg') + '</h2><p class="ans">Richtig ist: <span class="math">' + p.ansHtml + '</span></p><ol class="steps">' + p.steps.map((s) => '<li>' + s + '</li>').join('') + '</ol></div>';
       h += '<button class="btn primary" data-act="next" id="nextbtn">' + (exam && S.idx === S.queue.length - 1 ? 'Auswertung' : (S.queue && S.idx === S.queue.length - 1 ? 'Fertig' : 'Nächste Aufgabe')) + '</button>';
     } else {
@@ -1790,8 +1982,10 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     const by = {}; S.results.forEach((r) => { (by[r.t] = by[r.t] || []).push(r.ok); });
     const rows = Object.keys(by).map((id) => '<div class="sumrow"><span>' + esc(T(id).name) + '</span><b>' + by[id].filter(Boolean).length + ' / ' + by[id].length + '</b></div>').join('');
     const mins = Math.max(1, Math.round((Date.now() - S.t0) / 60000)); if (S.mode === 'exam') { data.exams = data.exams || []; data.exams.unshift({ name: EXAMS[S.exam].name.split(':')[0], ok, n, min: mins, date: new Date().toLocaleDateString('de-CH') }); data.exams = data.exams.slice(0, 12); save(); }
+    if (S.mode === 'blitz') { data.blitz = Math.max(ok, 0); award(false); save(); }
+    if (pc >= 80 && (S.mode === 'exam' || S.mode === 'blitz')) setTimeout(() => confetti(50), 200);
     const msg = pc >= 85 ? 'Sehr stark.' : pc >= 60 ? 'Solide. Die roten Themen nochmals üben.' : 'Noch Luft nach oben. Übe die Themen unten einzeln.';
-    $app.innerHTML = '<div class="bar"><button class="btn ghost back" data-act="home" aria-label="Zurück">←</button><div class="ttl">Auswertung</div></div><div class="card"><div class="big">' + ok + ' / ' + n + '</div><p class="muted" style="margin:4px 0 12px">' + pc + ' % richtig, ' + mins + ' min. ' + msg + '</p>' + rows + '</div><div class="stack"><button class="btn primary" data-act="' + (S.mode === 'review' ? 'review' : 'exam') + '" data-e="' + (S.exam || 'A') + '">Nochmal</button><button class="btn" data-act="home">Zur Übersicht</button></div>' + nav();
+    $app.innerHTML = '<div class="bar"><button class="btn ghost back" data-act="home" aria-label="Zurück">←</button><div class="ttl">Auswertung</div></div><div class="card"><div class="big">' + ok + ' / ' + n + '</div><p class="muted" style="margin:4px 0 12px">' + pc + ' % richtig, ' + mins + ' min. ' + msg + '</p>' + rows + '</div><div class="stack"><button class="btn primary" data-act="' + (S.mode === 'review' ? 'review' : S.mode === 'blitz' ? 'blitz' : 'exam') + '" data-e="' + (S.exam || 'A') + '">Nochmal</button><button class="btn" data-act="home">Zur Übersicht</button></div>' + nav();
     window.scrollTo(0, 0);
   }
 
@@ -1803,6 +1997,11 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     if (a === 'topic') start('topic', b.dataset.id);
     else if (a === 'mix') start('mix');
     else if (a === 'exam') start('exam', null, b.dataset.e || 'A');
+    else if (a === 'blitz') start('blitz');
+    else if (a === 'weak') start('weak');
+    else if (a === 'goal') { data.goal = Math.max(5, Math.min(200, (data.goal || 20) + Number(b.dataset.d))); save(); progress(); }
+    else if (a === 'export') { try { const blob = new Blob([JSON.stringify(data)], { type: 'application/json' }); const u = URL.createObjectURL(blob); const l = document.createElement('a'); l.href = u; l.download = 'mathe-fortschritt-' + today() + '.json'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(() => URL.revokeObjectURL(u), 1000); } catch (err) { alert('Sichern ging nicht.'); } }
+    else if (a === 'import') { const f = document.getElementById('impf'); if (f) f.click(); }
     else if (a === 'grp') start('grp', b.dataset.g);
     else if (a === 'tab') { tab = b.dataset.tab; S = null; home(); }
     else if (a === 'chap') { const i = Number(b.dataset.i); if (i >= 0 && i < 24) chapter(i); }
@@ -1825,7 +2024,7 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
       else if (s !== en) { el.value = el.value.slice(0, s) + el.value.slice(en); el.setSelectionRange(s, s); }
       else if (s > 0) { el.value = el.value.slice(0, s - 1) + el.value.slice(s); el.setSelectionRange(s - 1, s - 1); }
     }
-    else if (a === 'reset') { if (b.dataset.sure) { data = { total: 0, ok: 0, streak: 0, best: 0, topics: {}, wrong: [] }; save(); home(); } else { b.dataset.sure = '1'; b.textContent = 'Wirklich löschen? Nochmals tippen.'; } }
+    else if (a === 'reset') { if (b.dataset.sure) { data = { total: 0, ok: 0, streak: 0, best: 0, topics: {}, wrong: [], recent: {}, days: {}, read: {}, goal: 20, xp: 0, badges: {} }; save(); home(); } else { b.dataset.sure = '1'; b.textContent = 'Wirklich löschen? Nochmals tippen.'; } }
   });
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' || !S || !S.p) return;
@@ -1833,6 +2032,13 @@ const DOC = {"kap": [{"n": 1, "titel": "Potenzen und Potenzgesetze", "typ": "Pot
     else if (e.target && e.target.matches && e.target.matches('input[type=text]')) {
       e.preventDefault(); const i = Number(e.target.dataset.i || 0); const nx = document.getElementById('ans' + (i + 1));
       if (nx) nx.focus(); else check();
+    }
+  });
+  $app.addEventListener('change', (e) => {
+    if (e.target && e.target.id === 'impf' && e.target.files && e.target.files[0]) {
+      const fr = new FileReader();
+      fr.onload = () => { try { const d = JSON.parse(fr.result); if (typeof d.total !== 'number' || typeof d.topics !== 'object') throw new Error('x'); data = Object.assign({ total: 0, ok: 0, streak: 0, best: 0, topics: {}, wrong: [], recent: {}, days: {}, read: {}, goal: 20, xp: 0, badges: {} }, d); save(); progress(); } catch (err) { alert('Diese Datei ist keine gültige Sicherung.'); } };
+      fr.readAsText(e.target.files[0]);
     }
   });
   $app.addEventListener('input', (e) => { if (e.target && e.target.id === 'tq') { tfilter = e.target.value; theoryList(); } });
